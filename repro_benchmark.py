@@ -87,19 +87,7 @@ if which == "both":
     print("note: peak RSS is cumulative for the process; run the phases separately for per-loader RSS")
 
 """
-#### current values with master
                           setup      ep1      ep2      ep3      ep4      ep5      ep6      ep7      ep8      ep9     ep10    total  peakRSS
-RDataLoader eager          0.43     7.49     0.15     0.04     0.04     0.04     0.04     0.04     0.04     0.04     0.04     8.38    1.78G
-
-#### after forcing compilation of the overload I need
-                          setup      ep1      ep2      ep3      ep4      ep5      ep6      ep7      ep8      ep9     ep10    total  peakRSS
-RDataLoader eager          0.45     5.14     0.15     0.04     0.04     0.04     0.04     0.04     0.04     0.04     0.04     6.06    1.76G
-
-#### after the define trick (my OG PR)
-                          setup      ep1      ep2      ep3      ep4      ep5      ep6      ep7      ep8      ep9     ep10    total  peakRSS
-RDataLoader eager          0.86     5.12     0.14     0.04     0.04     0.04     0.04     0.04     0.04     0.04     0.04     6.41    1.67G
-
-### after vincenzo's patch
-                          setup      ep1      ep2      ep3      ep4      ep5      ep6      ep7      ep8      ep9     ep10    total  peakRSS
-RDataLoader eager          0.98     4.12     0.15     0.04     0.05     0.05     0.04     0.04     0.04     0.04     0.04     5.61    1.65G
+uproot (in memory)         2.05     0.05     0.05     0.05     0.05     0.06     0.05     0.05     0.05     0.05     0.05     2.56    0.79G
+RDataLoader eager          1.05     3.82     0.04     0.04     0.04     0.04     0.03     0.04     0.03     0.04     0.04     5.19    1.51G
 """
